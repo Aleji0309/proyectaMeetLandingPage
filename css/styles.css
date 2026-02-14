@@ -1,0 +1,50 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: #000000;
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+    --font-family: "Inter", sans-serif;
+    --font-youg: "Young", sans-serif;
+}
+
+/* Eliminar el modelo caja de css para medidas */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--font-family);
+}
+
+
+
+/* Media Queries */
+
+/*Celular*/
+@media (max-width: 490px) {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .main-container {
+        width: auto;
+        min-height: 100vh;
+        margin: 0;
+    }
+}
