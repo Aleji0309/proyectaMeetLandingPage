@@ -33,6 +33,13 @@ body {
 .subtitle {
     font-family: var(--font-youg);
     font-size: 4rem;
+    margin: 2rem 0;
+}
+
+.subtitle-3 {
+    color: var(--cyan-600);
+    font-size: 6rem;
+    margin: 0;
 }
 
 .text {
@@ -46,7 +53,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
 }
 
 .main-container {
@@ -54,12 +60,14 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 6rem 0;
+    padding-top: 6rem;
+    padding-bottom: 0;
 }
 
 .first-section {
     width: 100%;
     height: 50vh;
+    gap: 6rem;
 }
 
 .second-card {
@@ -71,29 +79,58 @@ body {
     max-width: 80%;
 }
 
+.third-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+
+}
+
 .button-container {
     display: flex;
-    gap: 6rem;
+    gap: 4rem;
 }
 
 .download-button,
 .info-button {
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
     border: none;
     border-radius: 8rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
     cursor: pointer;
+    color: var(--white);
+
+}
+
+.download-button {
+    background-color: var(--cyan-600);
+}
+
+.info-button {
+    background-color: var(--purple-600);
 }
 
 .number-section {
-    font-size: 8rem
+    border-radius: 50%;
+    border: solid 2px var(--slate-300);
+    width: 25px;
+    height: 25px;
+    padding: 4rem;
+    margin-bottom: 4rem
 }
 
+.number-content {
+    color: var(--slate-600);
+    font-size: 2rem;
+}
 
 .images-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    margin-bottom: 4rem;
 }
 
 .images-container img {
@@ -103,21 +140,121 @@ body {
 }
 
 
+.footer-section {
+    background:
+        linear-gradient(rgba(77, 150, 168, 0.9),
+            rgba(77, 150, 168, 0.9)),
+        url('../assets/desktop/image-footer.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    width: 100%;
+    margin-bottom: 0;
+    gap: 4rem;
+}
+
+.subtitle-footer {
+    color: var(--white);
+    font-size: 4rem;
+    margin: 0;
+}
+
+.subtitle-3-footer {
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 3rem;
+    font-weight: lighter;
+}
+
+
+
+
 
 
 /* Media Queries */
 
-/*Celular*/
-@media (max-width: 490px) {
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
+/*Tablet*/
+
+@media (max-width: 900px) {
+    .first-section {
+        height: auto;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 2rem 0;
     }
 
+    .button-container {
+        flex-direction: column;
+        gap: 1.6rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .download-button,
+    .info-button {
+        width: min(32rem, 100%);
+    }
+
+    .images-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .footer-section {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 2.4rem;
+        padding: 6rem 2rem;
+    }
+
+    .second-section,
+    .third-section {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 490px) {
     .main-container {
-        width: auto;
-        min-height: 100vh;
-        margin: 0;
+        padding-top: 3rem;
+    }
+
+    .subtitle {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    .subtitle-3 {
+        font-size: 4.2rem;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        padding: 0 1.2rem;
+    }
+
+    .first-section {
+        gap: 3rem;
+    }
+
+    .images-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        padding: 5rem 1.6rem;
+    }
+
+    .subtitle-footer {
+        font-size: 3.2rem;
+    }
+
+    .subtitle-3-footer {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
     }
 }
